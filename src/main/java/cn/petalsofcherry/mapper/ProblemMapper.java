@@ -1,19 +1,18 @@
 package cn.petalsofcherry.mapper;
 
-import cn.petalsofcherry.domain.Tianguohua;
+import cn.petalsofcherry.domain.Problem;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
-
 
 import java.util.List;
 
 /**
  * Created by luojingyu on 17-7-4.
  */
+
 @Mapper
-public interface TianguohuaMapper {
+public interface ProblemMapper {
 
-
-    @Select("SELECT * FROM tian_guo_hua order by id")
-    public List<Tianguohua> selectByCondtion();
+    @Select("SELECT * FROM problem limit 20")
+    public List<Problem> selectByCondition();
 }
