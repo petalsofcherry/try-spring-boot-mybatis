@@ -1,4 +1,4 @@
-package cn.petalsofcherry.mapper;
+package cn.petalsofcherry.mapper.problem;
 
 import cn.petalsofcherry.domain.Problem;
 import org.apache.ibatis.annotations.Mapper;

@@ -1,7 +1,7 @@
 package cn.petalsofcherry.controller;
 
 import cn.petalsofcherry.domain.Tianguohua;
-import cn.petalsofcherry.mapper.TianguohuaMapper;
+import cn.petalsofcherry.mapper.tianguohua.TianguohuaMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +15,7 @@ import java.util.List;
 public class TianguohuaController {
     @Autowired private TianguohuaMapper tianguohuaMapper;
 
-    @GetMapping("/")
+    @GetMapping("/tianguohua")
     public List<Tianguohua> get() {
         return tianguohuaMapper.selectByCondtion();
     }

@@ -1,7 +1,8 @@
 package cn.petalsofcherry.controller;
 
 import cn.petalsofcherry.domain.Problem;
-import cn.petalsofcherry.mapper.ProblemMapper;
+import cn.petalsofcherry.mapper.problem.ProblemMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,10 +13,10 @@ import java.util.List;
  */
 @RestController
 public class ProblemController {
-
+    @Autowired
     private ProblemMapper problemMapper;
 
-    @GetMapping("/")
+    @GetMapping("/problem")
     public List<Problem> getProblem() {
         return problemMapper.selectByCondition();
     }
